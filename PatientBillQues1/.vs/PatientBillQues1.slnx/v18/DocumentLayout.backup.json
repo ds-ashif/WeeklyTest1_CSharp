@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\capgeminiTraining\\WeeklyTest1\\PatientBillQues1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C076893-FE68-5FAD-16E9-84F4846F0F23}|PatientBillQues1\\PatientBillQues1.csproj|d:\\capgeminitraining\\weeklytest1\\patientbillques1\\patientbillques1\\patientbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C076893-FE68-5FAD-16E9-84F4846F0F23}|PatientBillQues1\\PatientBillQues1.csproj|solutionrelative:patientbillques1\\patientbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C076893-FE68-5FAD-16E9-84F4846F0F23}|PatientBillQues1\\PatientBillQues1.csproj|d:\\capgeminitraining\\weeklytest1\\patientbillques1\\patientbillques1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C076893-FE68-5FAD-16E9-84F4846F0F23}|PatientBillQues1\\PatientBillQues1.csproj|solutionrelative:patientbillques1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientBill.cs",
+              "DocumentMoniker": "D:\\capgeminiTraining\\WeeklyTest1\\PatientBillQues1\\PatientBillQues1\\PatientBill.cs",
+              "RelativeDocumentMoniker": "PatientBillQues1\\PatientBill.cs",
+              "ToolTip": "D:\\capgeminiTraining\\WeeklyTest1\\PatientBillQues1\\PatientBillQues1\\PatientBill.cs",
+              "RelativeToolTip": "PatientBillQues1\\PatientBill.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAiwLEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T09:02:53.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\capgeminiTraining\\WeeklyTest1\\PatientBillQues1\\PatientBillQues1\\Program.cs",
+              "RelativeDocumentMoniker": "PatientBillQues1\\Program.cs",
+              "ToolTip": "D:\\capgeminiTraining\\WeeklyTest1\\PatientBillQues1\\PatientBillQues1\\Program.cs",
+              "RelativeToolTip": "PatientBillQues1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T09:02:23.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\capgeminiTraining\\WeeklyTest1\\QuickMartTraders\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8E619F9-58B2-47E4-AE8B-1DB5ED341F4E}|QuickMartTraders.csproj|d:\\capgeminitraining\\weeklytest1\\quickmarttraders\\saletransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8E619F9-58B2-47E4-AE8B-1DB5ED341F4E}|QuickMartTraders.csproj|solutionrelative:saletransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8E619F9-58B2-47E4-AE8B-1DB5ED341F4E}|QuickMartTraders.csproj|d:\\capgeminitraining\\weeklytest1\\quickmarttraders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8E619F9-58B2-47E4-AE8B-1DB5ED341F4E}|QuickMartTraders.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SaleTransaction.cs",
+              "DocumentMoniker": "D:\\capgeminiTraining\\WeeklyTest1\\QuickMartTraders\\SaleTransaction.cs",
+              "RelativeDocumentMoniker": "SaleTransaction.cs",
+              "ToolTip": "D:\\capgeminiTraining\\WeeklyTest1\\QuickMartTraders\\SaleTransaction.cs",
+              "RelativeToolTip": "SaleTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T10:26:23.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\capgeminiTraining\\WeeklyTest1\\QuickMartTraders\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\capgeminiTraining\\WeeklyTest1\\QuickMartTraders\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T10:25:44.629Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
