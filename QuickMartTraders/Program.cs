@@ -2,12 +2,44 @@
 
 namespace QuickMartTraders
 {
+    /// <summary>
+    /// Provides the entry point for the QuickMart Traders console application.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class is responsible for initializing the application,
+    /// displaying the main menu, and routing user input to the
+    /// appropriate transaction operations.
+    /// </para>
+    /// <para>
+    /// The application runs in a continuous loop until the user
+    /// explicitly selects the exit option.
+    /// </para>
+    /// </remarks>
     public class Program
     {
+        #region Application Entry Point
+
         /// <summary>
-        /// Entry point of the QuickMart Traders application.
-        /// Displays menu and handles user interaction.
+        /// The main entry point of the QuickMart Traders application.
         /// </summary>
+        /// <param name="args">
+        /// Command-line arguments supplied at application startup.
+        /// Currently not used.
+        /// </param>
+        /// <remarks>
+        /// <para>
+        /// This method creates a single instance of
+        /// <see cref="SaleTransaction"/> and uses it throughout the
+        /// application lifecycle.
+        /// </para>
+        /// <para>
+        /// User interaction is handled through a menu-driven
+        /// console interface.
+        /// </para>
+        /// </remarks>
+        
+
         public static void Main(string[] args)
         {
             
@@ -48,5 +80,6 @@ namespace QuickMartTraders
                 }
             }
         }
+        #endregion
     }
 }

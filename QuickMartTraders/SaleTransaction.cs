@@ -2,33 +2,110 @@
 
 namespace QuickMartTraders
 {
+    /// <summary>
+    /// Represents a sales transaction within the QuickMart Traders system.
+    /// This class is responsible for capturing transaction details,
+    /// calculating profit or loss, and storing the most recent transaction.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The <see cref="SaleTransaction"/> class supports basic console-based
+    /// transaction input and financial analysis.
+    /// </para>
+    /// <para>
+    /// The most recently processed transaction is stored statically and can
+    /// be viewed or recalculated at any time during application execution.
+    /// </para>
+    /// </remarks>
+    
     public class SaleTransaction
     {
+
+        #region Static Members
         /// <summary>
-        /// Represents the most recent sale transaction processed by the system, or null if no transactions have
-        /// occurred.
+        /// Stores the most recent sale transaction processed by the system.
         /// </summary>
+        /// <remarks>
+        /// This value will be <c>null</c> if no transaction has been created yet.
+        /// </remarks>
+       
         public static SaleTransaction? LastTransaction;
+        /// <summary>
+        /// Indicates whether a valid last transaction exists.
+        /// </summary>
         public static bool HasLastTransaction = false;
+        #endregion
 
+
+        #region Transaction Properties
 
         /// <summary>
-        ///  Properties
+        /// Gets or sets the invoice number associated with the transaction.
         /// </summary>
         public string? InvoiceNo { get; set; }
-        public string? CustomerName { get; set; }
-        public string? ItemName { get; set; }
-        public int Quantity { get; set; }
-        public decimal PurchaseAmount { get; set; }
-        public decimal SellingAmount { get; set; }
-
-        public string ProfitOrLossStatus { get; set; }
-        public decimal ProfitOrLossAmount { get; set; }
-        public decimal ProfitMarginPercent { get; set; }
 
         /// <summary>
-        /// creating the transaction
+        /// Gets or sets the name of the customer involved in the transaction.
         /// </summary>
+        public string? CustomerName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the item sold.
+        /// </summary>
+
+        public string? ItemName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the quantity of items sold.
+        /// </summary>
+        public int Quantity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total purchase cost of the items.
+        /// </summary>
+        public decimal PurchaseAmount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total selling amount of the items.
+        /// </summary>
+        public decimal SellingAmount { get; set; }
+
+        /// <summary>
+        /// Gets the profit or loss status of the transaction
+        /// (PROFIT, LOSS, or BREAK-EVEN).
+        /// </summary>
+        public string ProfitOrLossStatus { get; set; }
+
+        /// <summary>
+        /// Gets the absolute profit or loss amount.
+        /// </summary>
+        public decimal ProfitOrLossAmount { get; set; }
+
+        /// <summary>
+        /// Gets the profit margin percentage based on purchase amount.
+        /// </summary>
+        public decimal ProfitMarginPercent { get; set; }
+        #endregion
+
+
+        #region Transaction Creation
+
+        /// <summary>
+        /// Captures transaction details from the console, validates input,
+        /// calculates profit or loss, and stores the transaction.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method performs input validation and terminates early if
+        /// invalid data is detected.
+        /// </para>
+        /// <para>
+        /// On successful completion, the transaction is stored as the
+        /// most recent transaction.
+        /// </para>
+        /// </remarks>
+
+
         public void CreateTransaction()
         {
             Console.Write("Enter Invoice No: ");
@@ -81,11 +158,20 @@ namespace QuickMartTraders
             PrintCalculation();
             Console.WriteLine("------------------------------------------------------");
         }
+        #endregion
+
+        #region Financial Calculations
+
 
         /// <summary>
-        /// Calculates profit or loss amount, status,
-        /// and profit margin percentage.
+        /// Calculates the profit or loss amount, status,
+        /// and profit margin percentage for the transaction.
         /// </summary>
+        /// <remarks>
+        /// Profit margin is calculated using the formula:
+        /// <c>(ProfitOrLossAmount / PurchaseAmount) × 100</c>.
+        /// </remarks>
+        
         public void CalculateProfitLoss()
         {
             if (SellingAmount > PurchaseAmount)
@@ -106,10 +192,17 @@ namespace QuickMartTraders
 
             ProfitMarginPercent = (ProfitOrLossAmount / PurchaseAmount) * 100;
         }
+        #endregion
+
+        #region Transaction Viewing
 
         /// <summary>
-        /// Displays the last stored transaction details.
+        /// Displays the details of the most recent transaction.
         /// </summary>
+        /// <remarks>
+        /// If no transaction exists, an informative message is displayed.
+        /// </remarks>
+
         public void ViewLastTransaction()
         {
             if (!HasLastTransaction || LastTransaction == null)
@@ -133,8 +226,8 @@ namespace QuickMartTraders
         }
 
         /// <summary>
-        /// Recalculates and prints profit/loss details
-        /// for the last transaction.
+        /// Recalculates and displays profit or loss information
+        /// for the most recent transaction.
         /// </summary>
         public void RecalculateProfitLoss()
         {
@@ -148,13 +241,20 @@ namespace QuickMartTraders
             LastTransaction.PrintCalculation();
             Console.WriteLine("------------------------------------------------------");
         }
+        #endregion
 
-        // ===== HELPER PRINT METHOD =====
+        #region Helper Methods
+
+        /// <summary>
+        /// Prints calculated profit or loss details to the console.
+        /// </summary>
+
         private void PrintCalculation()
-        {
+        {   
             Console.WriteLine($"Status: {ProfitOrLossStatus}");
             Console.WriteLine($"Profit/Loss Amount: {ProfitOrLossAmount:F2}");
             Console.WriteLine($"Profit Margin (%): {ProfitMarginPercent:F2}");
         }
+        #endregion
     }
 }

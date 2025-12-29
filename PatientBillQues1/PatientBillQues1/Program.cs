@@ -1,12 +1,41 @@
 ﻿using System;
 namespace PatientBillQues1
 {
+    /// <summary>
+    /// Contains the entry point for the MediSure Clinic Billing application.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This program provides a menu-driven console interface
+    /// that allows users to create, view, and clear patient bills.
+    /// </para>
+    /// <para>
+    /// The application runs continuously until the user selects
+    /// the exit option.
+    /// </para>
+    /// </remarks>
+    
     public class Program
     {
+        #region Application Entry Point
+
         /// <summary>
         /// Main method where application execution begins.
-        /// Displays the menu repeatedly until the user chooses to exit.
         /// </summary>
+        /// <param name="args">
+        /// Command-line arguments passed at startup.
+        /// These are not used in the current implementation.
+        /// </param>
+        /// <remarks>
+        /// <para>
+        /// A single <see cref="PatientBill"/> object is created and reused
+        /// to perform billing-related operations.
+        /// </para>
+        /// <para>
+        /// User interaction is handled through a loop-driven
+        /// menu system using console input and output.
+        /// </para>
+        /// </remarks>
         public static void Main(string[] args)
         {
             /// <summary>
@@ -59,8 +88,7 @@ namespace PatientBillQues1
                 }
 
             }
-
-
         }
+        #endregion
     }
 }

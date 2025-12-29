@@ -5,47 +5,126 @@ using System.Text;
 namespace PatientBillQues1
 {
     /// <summary>
-    /// Represents a patient's billing information, including charges, discounts, and insurance status, for use in a
-    /// medical billing context.
+    /// Represents a patient's billing record in a medical billing system.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class is responsible for capturing patient billing details,
+    /// calculating gross amount, applying insurance-based discounts,
+    /// and determining the final payable amount.
+    /// </para>
+    /// <para>
+    /// The most recently created bill is stored statically and can be
+    /// viewed or cleared during the application's execution.
+    /// </para>
+    /// </remarks>
     
+
+
     public class PatientBill
     {
+        #region Static Members
+
         /// <summary>
-        /// Represents the most recently generated patient bill, or null if no bill has been created.
+        /// <summary>
+        /// Stores the most recently generated patient bill.
         /// </summary>
+        /// <remarks>
+        /// This value will be <c>null</c> if no bill has been created.
+        /// </remarks>
         public static PatientBill? LastBill;
+
+        /// <summary>
+        /// Indicates whether a valid last bill exists.
+        /// </summary>
         public static bool HasLastBill = false;
+        #endregion
+
+
+        #region Bill Properties
 
         /// <summary>
         /// Gets or sets the unique identifier for the bill.
         /// </summary>
-
         public string? BillId { get; set; }
-        public string? PatientName{get; set;}
-        public bool HasInsurance { get; set; }
-        public decimal ConsultationFee { get; set; }
-        public decimal LabCharges { get; set; }
-        public decimal MedicineCharges { get; set; }
-
-        public decimal GrossAmount { get; set; }
-        public decimal DiscountAmount { get; set; }
-        public decimal FinalPayable { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the PatientBill class.
+        /// Gets or sets the name of the patient.
         /// </summary>
+        public string? PatientName{get; set;}
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the patient has insurance coverage.
+        /// </summary>
+        public bool HasInsurance { get; set; }
+
+        /// <summary>
+        /// Gets or sets the consultation fee charged to the patient.
+        /// </summary>
+        public decimal ConsultationFee { get; set; }
+
+        /// <summary>
+        /// Gets or sets the laboratory charges incurred by the patient.
+        /// </summary>
+        public decimal LabCharges { get; set; }
+
+        /// <summary>
+        /// Gets or sets the medicine charges incurred by the patient.
+        /// </summary>
+        public decimal MedicineCharges { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total amount before discounts.
+        /// </summary>
+        public decimal GrossAmount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the discount amount applied to the bill.
+        /// </summary>
+        public decimal DiscountAmount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the final payable amount after discounts.
+        /// </summary>
+        public decimal FinalPayable { get; set; }
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PatientBill"/> class.
+        /// </summary>
+        /// <remarks>
+        /// This constructor does not initialize any values explicitly.
+        /// All values are populated through user input.
+        /// </remarks>
+        
+
+
 
         public PatientBill()
         {
             
         }
+        #endregion
+
+        #region Bill Creation
 
         /// <summary>
-        /// Prompts the user to enter billing information and calculates the bill details for a patient.
+        /// Prompts the user to enter patient billing details,
+        /// performs validation, calculates billing amounts,
+        /// and stores the bill as the most recent record.
         /// </summary>
-        
-
+        /// <remarks>
+        /// <para>
+        /// A discount of 10% is applied if the patient has insurance.
+        /// </para>
+        /// <para>
+        /// If invalid input is detected, the method terminates early
+        /// without creating a bill.
+        /// </para>
+        /// </remarks>
         public void CreateBill()
         {
             Console.Write("Enter Bill Id: ");
@@ -123,12 +202,16 @@ namespace PatientBillQues1
 
 
         }
+        #endregion
+
+        #region Bill Viewing
 
         /// <summary>
-        /// Displays the details of the most recently created bill in the console output.
+        /// Displays the details of the most recently created bill.
         /// </summary>
-        
-
+        /// <remarks>
+        /// If no bill exists, an informational message is displayed.
+        /// </remarks>
         public void ViewLastBill()
         {
             Console.WriteLine("----------- Last Bill -----------");
@@ -157,24 +240,27 @@ namespace PatientBillQues1
             Console.WriteLine("--------------------------------");
             Console.WriteLine();
 
-
-
-
         }
 
-        /// <summary>
-        /// Clears the record of the last bill and resets the related state.
-        /// </summary>
-        
+        #endregion
 
+        #region Bill Maintenance
+
+        /// <summary>
+        /// Clears the record of the most recently created bill.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, no bill will be available
+        /// for viewing until a new bill is created.
+        /// </remarks>
         public void ClearBill()
         {
             LastBill = null;
             HasLastBill = false;
             Console.WriteLine("Last bill cleared.");
             Console.WriteLine();
-
-
         }
+        #endregion
+
     }
 }
